@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import com.msruas.debug.rumschat.APIServices.RUMSService;
+import com.msruas.debug.rumschat.ChatActivity;
 import com.msruas.debug.rumschat.R;
 import com.msruas.debug.rumschat.model.ResponseMessage;
 import com.msruas.debug.rumschat.network.RUMSAPI;
@@ -87,7 +88,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString(Constants.EMAIL, response.getMessage());
                     editor.apply();
 
-                    // now go to profile intent
+                    // now go to ChatActivity
+                    startActivity(new Intent(LoginActivity.this, ChatActivity.class));
 
                 }, (error) -> {
                     if (error instanceof HttpException) {

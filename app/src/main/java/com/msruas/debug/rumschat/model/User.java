@@ -29,6 +29,10 @@ public class User {
         this.token = token;
     }
 
+    public String getRegNo() {
+        return this.regNo;
+    }
+
     public String getName() {
         return this.name;
     }
