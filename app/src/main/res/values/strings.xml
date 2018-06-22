@@ -13,4 +13,6 @@
     <string name="tv_register">REGISTER</string>
     <string name="register_button">Register</string>
     <string name="register_textView">TEST</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

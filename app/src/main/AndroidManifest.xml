@@ -10,14 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".InitialActivity.LoginActivity" android:launchMode="singleInstance">
+        
+        <activity
+            android:name=".UsersList"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InitialActivity.RegisterActivity" android:launchMode="singleInstance"></activity>
+
+        <activity
+            android:name=".ChatActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".InitialActivity.RegisterActivity"
+            android:launchMode="singleInstance">
+        </activity>
+
+        <activity
+            android:name=".InitialActivity.LoginActivity">
+        </activity>
+
     </application>
+
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
