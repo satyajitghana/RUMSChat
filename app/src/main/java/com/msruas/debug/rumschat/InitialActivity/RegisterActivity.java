@@ -3,7 +3,6 @@ package com.msruas.debug.rumschat.InitialActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         String email = et_email.getText().toString();
         String password = et_password.getText().toString();
 
+        // the regNo should be checked if it's a valid registration number - shadowleaf (satyajit_ghana)
         if (!Validation.validateField(name)) {
             et_name.setError("Name cannot be Empty");
         } else if(!Validation.validateField(regNo)) {

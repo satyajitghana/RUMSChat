@@ -12,13 +12,13 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".UsersList"
+            android:name=".landingActivity.UsersList"
             android:launchMode="singleInstance"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
 
         <activity
-            android:name=".ChatActivity"
+            android:name=".landingActivity.ChatActivity"
             android:launchMode="singleInstance"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -26,17 +26,34 @@
 
         <activity
             android:name=".InitialActivity.RegisterActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity
+            android:name=".chatActivity.ChatWithUser"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
 
         <activity
             android:name=".InitialActivity.LoginActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
 
     </application>

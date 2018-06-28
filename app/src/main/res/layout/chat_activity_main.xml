@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".landingActivity.ChatActivity">
 
     <!--App Bar -> ToolBar -> TabLayout-->
     <!--The TabLayout is inside a ToolBar inside a App Bar layout-->
@@ -31,11 +31,12 @@
     </android.support.design.widget.AppBarLayout>
 
     <!--View Pager to control the fragments-->
-
+    <!--the marginTop is set to 72dp because the freaking TABS on top take 72dp so this has to come down-->
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:ignore="PrivateResource" />
 

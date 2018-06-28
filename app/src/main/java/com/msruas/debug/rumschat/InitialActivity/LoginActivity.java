@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import com.msruas.debug.rumschat.APIServices.RUMSService;
-import com.msruas.debug.rumschat.ChatActivity;
+import com.msruas.debug.rumschat.landingActivity.ChatActivity;
 import com.msruas.debug.rumschat.R;
 import com.msruas.debug.rumschat.model.ResponseMessage;
 import com.msruas.debug.rumschat.network.RUMSAPI;
@@ -83,9 +83,16 @@ public class LoginActivity extends AppCompatActivity {
                 .subscribe((response) -> {
                     Toast.makeText(LoginActivity.this, response.getMessage() + " Logged in !", Toast.LENGTH_LONG).show();
 
+                    // How about storing it in profile, so we can access it everywhere, and also the drawer needs
+                    // to be populated, it's completely empty as of now - shadowleaf (satyajit_ghana)
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(Constants.TOKEN, response.getToken());
-                    editor.putString(Constants.EMAIL, response.getMessage());
+//                    String[] result = response.getMessage().split(".",2);
+//                    String _regNo = result[0];
+//                    String _name = result[1];
+                    String _regNo = response.getMessage();
+                    editor.putString(Constants.REGNO, _regNo);
+                    //editor.putString(Constants.NAME, "Satyajit Ghana");
                     editor.apply();
 
                     // now go to ChatActivity
